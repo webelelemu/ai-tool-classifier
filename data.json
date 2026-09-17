@@ -19,8 +19,8 @@
     "repo_url": "https://github.com/ollama/ollama",
     "name": "ollama",
     "description": "Get up and running with Kimi, GLM, MiniMax, DeepSeek, gpt-oss, Qwen, Gemma and other models.",
-    "stars": 181246,
-    "forks": 17919,
+    "stars": 181248,
+    "forks": 17918,
     "last_commit_hash": "ec3cc23076c489c988e4e8a85659e48e92dbb734",
     "category": "software",
     "purpose": "Ollama allows users to run and manage large language models locally. It provides a command-line interface, a REST API, and integrations with various desktop agents and applications for coding, AI assistance, and chat.",
@@ -31,7 +31,7 @@
       "opencode",
       "cursor"
     ],
-    "last_synced": "2026-09-17T16:50:01Z"
+    "last_synced": "2026-09-17T17:24:49Z"
   },
   {
     "repo_url": "https://github.com/wonderwhy-er/DesktopCommanderMCP",
@@ -204,5 +204,19 @@
       "cursor"
     ],
     "last_synced": "2026-09-17T16:22:01Z"
+  },
+  {
+    "repo_url": "https://github.com/NousResearch/hermes-agent",
+    "name": "hermes-agent",
+    "description": "The agent that grows with you",
+    "stars": 246460,
+    "forks": 51592,
+    "last_commit_hash": "64ea66b03d44ead9ffea48161132e5deca5d255a",
+    "category": "hermes_agent",
+    "purpose": "Hermes Agent is a self-improving AI agent that learns from experience, creates and refines skills, and builds a deep understanding of the user across sessions. It supports various models and can run on diverse infrastructure, from VPS to serverless, and integrates with multiple messaging platforms.",
+    "installation": "Linux, macOS, WSL2, Termux:\n```bash\ncurl -fsSL https://hermes-agent.nousresearch.com/install.sh | bash\n```\nWindows (native, PowerShell):\n```powershell\niex (irm https://hermes-agent.nousresearch.com/install.ps1)\n```\nAfter installation:\n```bash\nsource ~/.bashrc    # reload shell (or: source ~/.zshrc)\nhermes              # start chatting!\n```",
+    "install_surface": "cli",
+    "desktop_compatibility": [],
+    "last_synced": "2026-09-17T17:24:51Z"
   }
 ]
