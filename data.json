@@ -1,0 +1,18 @@
+[
+  {
+    "repo_url": "https://github.com/modelcontextprotocol/servers",
+    "name": "servers",
+    "description": "Model Context Protocol Servers",
+    "stars": 90361,
+    "forks": 11640,
+    "last_commit_hash": "d73f99efbfd40c3aa1b61e88728b3d49fb52608f",
+    "category": "mcp",
+    "purpose": "This repository provides reference implementations for the Model Context Protocol (MCP) servers, showcasing how to give Large Language Models (LLMs) secure, controlled access to tools and data sources. It includes examples for various functionalities like web content fetching, secure file operations, Git repository manipulation, and knowledge graph-based memory systems.",
+    "installation": "TypeScript-based servers:\nnpx -y @modelcontextprotocol/server-memory\n\nPython-based servers:\nuvx mcp-server-git\n\npip install mcp-server-git\npython -m mcp_server_git\n\nClaude Desktop MCP configuration example:\n```json\n{\n  \"mcpServers\": {\n    \"memory\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"@modelcontextprotocol/server-memory\"]\n    }\n  }\n}\n```\n\nClaude Desktop MCP configuration example (Windows):\n```json\n{\n  \"mcpServers\": {\n    \"memory\": {\n      \"command\": \"cmd\",\n      \"args\": [\"/c\", \"npx\", \"-y\", \"@modelcontextprotocol/server-memory\"]\n    }\n  }\n}\n```\n\nAdditional Claude Desktop MCP configuration examples:\n```json\n{\n  \"mcpServers\": {\n    \"filesystem\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"@modelcontextprotocol/server-filesystem\", \"/path/to/allowed/files\"]\n    },\n    \"git\": {\n      \"command\": \"uvx\",\n      \"args\": [\"mcp-server-git\", \"--repository\", \"path/to/git/repo\"]\n    },\n    \"github\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"@modelcontextprotocol/server-github\"],\n      \"env\": {\n        \"GITHUB_PERSONAL_ACCESS_TOKEN\": \"<YOUR_TOKEN>\"\n      }\n    },\n    \"postgres\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"@modelcontextprotocol/server-postgres\", \"postgresql://localhost/mydb\"]\n    }\n  }\n}\n```",
+    "install_surface": "mcp_config",
+    "desktop_compatibility": [
+      "claude-desktop"
+    ],
+    "last_synced": "2026-09-15T18:13:06Z"
+  }
+]

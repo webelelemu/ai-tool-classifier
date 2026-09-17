@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark light">
+<title>AI Tool Classifier</title>
+<script>try{if(localStorage.getItem("tc-theme")==="dark"||(!localStorage.getItem("tc-theme")&&matchMedia("(prefers-color-scheme: dark)").matches))document.documentElement.classList.add("dark")}catch(e){}</script>
+<style>
+:root{--bg:#fff;--fg:#111;--muted:#666;--card:#f7f7f8;--border:#e2e2e6;--accent:#4f46e5}
+.dark{--bg:#111114;--fg:#eee;--muted:#aaa;--card:#1a1a1f;--border:#2c2c34;--accent:#818cf8}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.5 system-ui,sans-serif}
+header{padding:20px 16px 8px;max-width:1200px;margin:auto}
+.badge{display:inline-block;font-size:12px;background:var(--card);border:1px solid var(--border);border-radius:20px;padding:2px 10px;color:var(--muted)}
+.bar{position:sticky;top:0;background:var(--bg);border-bottom:1px solid var(--border);padding:10px 16px;z-index:5}
+.bar-inner{max-width:1200px;margin:auto;display:flex;gap:8px;flex-wrap:wrap}
+input,select,button{font:inherit;padding:8px 12px;border:1px solid var(--border);border-radius:8px;background:var(--card);color:var(--fg)}
+input{min-width:200px;flex:1}button{cursor:pointer;min-height:44px}
+.pills{max-width:1200px;margin:12px auto 0;padding:0 16px;display:flex;gap:8px;flex-wrap:wrap}
+.pill{border-radius:20px}.pill.on{background:var(--accent);color:#fff;border-color:var(--accent)}
+.grid{max-width:1200px;margin:16px auto;padding:0 16px;display:grid;gap:16px;grid-template-columns:repeat(auto-fill,minmax(300px,1fr))}
+.card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:14px}
+.card:hover{box-shadow:0 2px 12px rgba(0,0,0,.15)}
+.card h3{margin:0 0 4px;font-size:16px}.card h3 a{color:var(--accent);text-decoration:none}
+.cat{font-size:11px;font-weight:700;border-radius:6px;padding:2px 8px;color:#fff}
+.mcp{background:#7c3aed}.skill{background:#0d9488}.subagent{background:#d97706}.hermes_agent{background:#8b5cf6}.tool{background:#2563eb}.software{background:#475569}.gateway{background:#059669}
+.purpose{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;color:var(--muted);margin:8px 0}
+pre{background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:8px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:12px}
+.meta{display:flex;gap:10px;align-items:center;margin-top:8px;font-size:13px;color:var(--muted);flex-wrap:wrap}
+.drawer{position:fixed;top:0;right:0;bottom:0;width:min(560px,100%);background:var(--bg);border-left:1px solid var(--border);padding:20px;overflow:auto;z-index:10}
+.backdrop{position:fixed;inset:0;background:rgba(0,0,0,.4);z-index:9}
+.hidden{display:none}.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:var(--fg);color:var(--bg);padding:8px 16px;border-radius:8px}
+footer{max-width:1200px;margin:24px auto;padding:0 16px 40px;color:var(--muted);font-size:13px}
+@media(max-width:768px){.grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header><h1>AI Tool Classifier</h1><div><span class="badge" id="sync">loading…</span> <span class="badge" id="count"></span></div></header>
+<div class="bar"><div class="bar-inner">
+<input id="q" type="search" placeholder="Search tools…  ( / )" aria-label="Search">
+<select id="compat" aria-label="Desktop compatibility"><option value="">Any desktop</option><option>claude-desktop</option><option>opencode-desktop</option><option>cursor</option></select>
+<select id="sort" aria-label="Sort"><option value="stars">Stars</option><option value="updated">Recently updated</option><option value="name">Name</option></select>
+<button id="theme" aria-label="Toggle theme">◐</button>
+</div></div>
+<div class="pills" id="pills"></div>
+<main class="grid" id="grid" aria-live="polite"></main>
+<div style="text-align:center"><button id="more" class="hidden">Load more</button></div>
+<div id="sheet"></div>
+<footer><a href="data.json">data.json</a> · <a href="llms.txt">llms.txt</a> · <span id="foot"></span></footer>
+<div class="toast hidden" id="toast">Copied ✓</div>
+<script>
+let DATA=[], shown=0; const PER=50;
+const CATS=["tool","software","subagent","mcp","skill","hermes_agent","gateway"];
+const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const compact=n=>n>=1000?(n/1000).toFixed(1)+"k":n;
+const params=()=>new URLSearchParams(location.search);
+function state(){const p=params();return{cat:p.get("category")||"",compat:p.get("compatible")||"",q:p.get("q")||""};}
+function syncURL(patch){const p=params();for(const k in patch){patch[k]?p.set(k,patch[k]):p.delete(k);}history.pushState({}, "", "?"+p.toString());}
+function filtered(){const s=state(),q=s.q.toLowerCase();
+  let r=DATA.filter(d=>(!s.cat||d.category===s.cat)&&(!s.compat||(d.desktop_compatibility||[]).includes(s.compat))&&(!q||(d.name+" "+d.purpose+" "+d.installation+" "+(d.description||"")).toLowerCase().includes(q)));
+  const by=document.getElementById("sort").value;
+  r.sort((a,b)=>by==="stars"?(b.stars-a.stars):by==="updated"?String(b.last_synced).localeCompare(String(a.last_synced)):a.name.localeCompare(b.name));
+  return r;}
+function card(d){return `<article class="card"><h3><a href="${esc(d.repo_url)}">${esc(d.name)}</a></h3>
+  <div><span class="cat ${esc(d.category)}">${esc(d.category)}</span> <span class="badge">★ ${compact(d.stars)}</span> <span class="badge">${esc(d.install_surface||"")}</span>${d.affiliate_candidate?' <span class="badge">Affiliate link</span>':""}</div>
+  <p class="purpose">${esc(d.purpose)}</p><pre>${esc((d.installation||"").split("\n")[0])}</pre>
+  <div class="meta"><span>⑂ ${d.forks}</span><span>${esc(d.last_synced||"").slice(0,10)}</span><button data-copy="${esc(d.installation||"")}">Copy</button><button data-repo="${esc(d.repo_url)}">Details</button></div></article>`;}
+function render(reset){const r=filtered();if(reset)shown=0;shown+=PER;
+  document.getElementById("grid").innerHTML=r.slice(0,shown).map(card).join("")||"<p>No matches - try All categories</p>";
+  document.getElementById("count").textContent=r.length+" items";
+  document.getElementById("more").classList.toggle("hidden",shown>=r.length);}
+function pills(){const s=state(),el=document.getElementById("pills");
+  const counts={};DATA.forEach(d=>counts[d.category]=(counts[d.category]||0)+1);
+  el.innerHTML=`<button class="pill${!s.cat?" on":""}" data-cat="">All (${DATA.length})</button>`+CATS.map(c=>`<button class="pill${s.cat===c?" on":""}" data-cat="${c}">${c} (${counts[c]||0})</button>`).join("");}
+function openRepo(url){const d=DATA.find(x=>x.repo_url===url);if(!d)return;
+  document.getElementById("sheet").innerHTML=`<div class="backdrop" id="bd"></div><div class="drawer"><button id="close">Esc ✕</button>
+  <h2><a href="${esc(d.repo_url)}">${esc(d.name)}</a></h2>
+  <p><span class="cat ${esc(d.category)}">${esc(d.category)}</span> <span class="badge">★ ${d.stars}</span> <span class="badge">⑂ ${d.forks}</span></p>
+  <p>${esc(d.purpose)}</p><p>${esc(d.description||"")}</p>
+  <pre style="white-space:pre-wrap">${esc(d.installation||"")}</pre>
+  <p>Compat: ${(d.desktop_compatibility||[]).map(esc).join(", ")||"—"}</p>
+  <p>Commit: ${esc((d.last_commit_hash||"").slice(0,7))} · Synced: ${esc(d.last_synced||"")}</p></div>`;
+  document.getElementById("close").onclick=closeSheet;document.getElementById("bd").onclick=closeSheet;}
+function closeSheet(){document.getElementById("sheet").innerHTML="";const p=params();p.delete("repo");history.pushState({},"","?"+p.toString());}
+function toast(){const t=document.getElementById("toast");t.classList.remove("hidden");setTimeout(()=>t.classList.add("hidden"),1200);}
+document.addEventListener("click",e=>{const c=e.target.closest("[data-copy]");if(c){navigator.clipboard.writeText(c.getAttribute("data-copy"));toast();return;}
+  const r=e.target.closest("[data-repo]");if(r){const p=params();p.set("repo",r.getAttribute("data-repo"));history.pushState({},"","?"+p.toString());openRepo(r.getAttribute("data-repo"));return;}
+  const pl=e.target.closest("[data-cat]");if(pl){syncURL({category:pl.getAttribute("data-cat")});pills();render(true);}});
+document.getElementById("q").addEventListener("input",e=>{syncURL({q:e.target.value});render(true);});
+document.getElementById("compat").addEventListener("change",e=>{syncURL({compatible:e.target.value});render(true);});
+document.getElementById("sort").addEventListener("change",()=>render(true));
+document.getElementById("more").addEventListener("click",()=>render(false));
+document.getElementById("theme").addEventListener("click",()=>{const d=document.documentElement.classList.toggle("dark");try{localStorage.setItem("tc-theme",d?"dark":"light")}catch(e){}});
+document.addEventListener("keydown",e=>{if(e.key==="Escape")closeSheet();if(e.key==="/"&&document.activeElement.tagName!=="INPUT"){e.preventDefault();document.getElementById("q").focus();}});
+fetch("data.json?v="+Date.now()).then(r=>r.json()).then(j=>{DATA=j;
+  const s=state();document.getElementById("q").value=s.q;document.getElementById("compat").value=s.compat;
+  const times=DATA.map(d=>d.last_synced).filter(Boolean).sort();document.getElementById("sync").textContent="synced "+(times.pop()||"—").slice(0,16).replace("T"," ");
+  document.getElementById("foot").textContent=DATA.length+" artifacts · zero-RAM static";
+  pills();render(true);if(params().get("repo"))openRepo(params().get("repo"));});
+</script>
+</body>
+</html>
