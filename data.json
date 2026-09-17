@@ -16,24 +16,6 @@
     "last_synced": "2026-09-15T18:13:06Z"
   },
   {
-    "repo_url": "https://github.com/ollama/ollama",
-    "name": "ollama",
-    "description": "Get up and running with Kimi, GLM, MiniMax, DeepSeek, gpt-oss, Qwen, Gemma and other models.",
-    "stars": 181248,
-    "forks": 17918,
-    "last_commit_hash": "ec3cc23076c489c988e4e8a85659e48e92dbb734",
-    "category": "software",
-    "purpose": "Ollama allows users to run and manage large language models locally. It provides a command-line interface, a REST API, and integrations with various desktop agents and applications for coding, AI assistance, and chat.",
-    "installation": "curl -fsSL https://ollama.com/install.sh | sh",
-    "install_surface": "cli",
-    "desktop_compatibility": [
-      "claude-code",
-      "opencode",
-      "cursor"
-    ],
-    "last_synced": "2026-09-17T17:24:49Z"
-  },
-  {
     "repo_url": "https://github.com/wonderwhy-er/DesktopCommanderMCP",
     "name": "DesktopCommanderMCP",
     "description": "This is MCP server for Claude that gives it terminal control, file system search and diff file editing capabilities",
@@ -48,20 +30,6 @@
       "claude-desktop"
     ],
     "last_synced": "2026-09-17T16:21:59Z"
-  },
-  {
-    "repo_url": "https://github.com/modelcontextprotocol/inspector",
-    "name": "inspector",
-    "description": "Visual testing tool for MCP servers",
-    "stars": 10901,
-    "forks": 1517,
-    "last_commit_hash": "2e90a628e6296c62e4bef942afbb43d3faa4baf4",
-    "category": "mcp",
-    "purpose": "MCP Inspector is a developer tool for inspecting Model Context Protocol (MCP) servers. It provides web, CLI, and TUI interfaces to visualize and interact with MCP servers, aiding in development, automation, and agent feedback loops.",
-    "installation": "npx @modelcontextprotocol/inspector",
-    "install_surface": "cli",
-    "desktop_compatibility": [],
-    "last_synced": "2026-09-17T10:14:41Z"
   },
   {
     "repo_url": "https://github.com/flowiseai/flowise",
@@ -81,15 +49,15 @@
     "repo_url": "https://github.com/langchain-ai/langchain",
     "name": "langchain",
     "description": "The agent engineering platform.",
-    "stars": 146528,
+    "stars": 146531,
     "forks": 24503,
-    "last_commit_hash": "b3ec70925f9bacce286f4e7e41f5d1d357c72bab",
+    "last_commit_hash": "d1fee60ef2ae62e7c5ca751a88bec12eb7997c78",
     "category": "software",
-    "purpose": "LangChain is a framework for building agents and LLM-powered applications, enabling the chaining of interoperable components and third-party integrations. It simplifies AI application development and helps future-proof decisions as underlying technology evolves.",
+    "purpose": "LangChain is a framework for building agents and LLM-powered applications, enabling the chaining of interoperable components and third-party integrations. It simplifies AI application development and helps future-proof decisions as underlying technologies evolve.",
     "installation": "uv add langchain",
     "install_surface": "cli",
     "desktop_compatibility": [],
-    "last_synced": "2026-09-17T16:22:04Z"
+    "last_synced": "2026-09-17T17:42:29Z"
   },
   {
     "repo_url": "https://github.com/chroma-core/chroma",
@@ -104,44 +72,6 @@
     "install_surface": "cli",
     "desktop_compatibility": [],
     "last_synced": "2026-09-17T10:14:45Z"
-  },
-  {
-    "repo_url": "https://github.com/wshobson/agents",
-    "name": "agents",
-    "description": "Multi-harness agentic plugin marketplace for Claude Code, Codex, Cursor, OpenCode, GitHub Copilot, Google Antigravity, and Pi",
-    "stars": 39749,
-    "forks": 4235,
-    "last_commit_hash": "4236bb91f8395b0435f1d8b8baf9e8e4c69a8620",
-    "category": "mcp",
-    "purpose": "This project provides a multi-harness agentic plugin marketplace offering 94 plugins, 202 agents, 183 skills, and 105 commands. It's designed to be consumed natively by various AI coding environments like Claude Code, OpenAI Codex CLI, Cursor, OpenCode, Antigravity CLI, GitHub Copilot, and Pi from a single Markdown source, providing idiomatic artifacts for each.",
-    "installation": "Claude Code:\n/plugin marketplace add wshobson/agents\n/plugin install python-development\n\nCodex CLI:\nnpx codex-marketplace add wshobson/agents\n\nCursor:\n# Cursor: add the marketplace, then `/plugin install <name>` (reads .cursor-plugin/ + source)\n\nAntigravity CLI:\ngh repo clone wshobson/agents ~/agents && cd ~/agents\nmake generate HARNESS=antigravity && make install-antigravity\n\nOpenCode:\ngh repo clone wshobson/agents ~/agents && cd ~/agents\nmake install-opencode\n\nPi:\ngh repo clone wshobson/agents ~/agents && cd ~/agents\nmake generate HARNESS=pi && make install-pi\n\nSkills only (gh skill):\ngh skill install wshobson/agents\ngh skill install wshobson/agents python-testing-patterns --agent claude-code\n\nSkills only (npx skills):\nnpx skills add wshobson/agents --skill python-testing-patterns",
-    "install_surface": "cli",
-    "desktop_compatibility": [
-      "claude-code",
-      "openai-codex-cli",
-      "cursor",
-      "opencode",
-      "antigravity-cli",
-      "github-copilot",
-      "pi"
-    ],
-    "last_synced": "2026-09-17T10:14:48Z"
-  },
-  {
-    "repo_url": "https://github.com/anthropics/skills",
-    "name": "skills",
-    "description": "Public repository for Agent Skills",
-    "stars": 176790,
-    "forks": 20932,
-    "last_commit_hash": "34040c9c568585f6929bedeaad110ad08f079624",
-    "category": "mcp",
-    "purpose": "This repository provides a collection of Anthropic's skills for Claude, designed to enhance its performance on specialized tasks. These skills, ranging from creative to technical and enterprise workflows, teach Claude to complete specific tasks repeatably by loading dynamic instructions, scripts, and resources.",
-    "installation": "/plugin marketplace add anthropics/skills",
-    "install_surface": "cli",
-    "desktop_compatibility": [
-      "claude-desktop"
-    ],
-    "last_synced": "2026-09-17T10:14:50Z"
   },
   {
     "repo_url": "https://github.com/obra/superpowers",
@@ -176,15 +106,15 @@
     "repo_url": "https://github.com/BerriAI/litellm",
     "name": "litellm",
     "description": "The fastest, litest AI Gateway. Rust core with Python SDK. Call 100+ LLM APIs in OpenAI (or native) format with cost tracking, guardrails, load balancing, and logging [Bedrock, Azure, OpenAI, Anthropic, OpenAI, VertexAI, vLLM, Nvidia NIM]",
-    "stars": 58971,
-    "forks": 11526,
-    "last_commit_hash": "4b368bf0669cfd3268b780eea6c69497b9a51850",
+    "stars": 58999,
+    "forks": 11531,
+    "last_commit_hash": "11b99142eb8210601879840b399fd5bb29dcbfa0",
     "category": "gateway",
-    "purpose": "LiteLLM is an open-source AI Gateway providing a unified interface to over 100 LLM providers, including OpenAI, Anthropic, and Azure. It can be used as a Python SDK for direct integration or deployed as a centralized proxy server for managing LLM calls with features like cost tracking, guardrails, and load balancing.",
+    "purpose": "LiteLLM is an open-source AI Gateway that provides a unified interface to over 100 LLM providers, allowing users to call any LLM in OpenAI format. It can be used as a Python SDK for direct integration or deployed as a centralized AI Gateway (Proxy Server) for teams.",
     "installation": "uv tool install 'litellm[proxy]'\nlitellm --model gpt-4o",
     "install_surface": "cli",
     "desktop_compatibility": [],
-    "last_synced": "2026-09-17T10:14:54Z"
+    "last_synced": "2026-09-17T17:42:34Z"
   },
   {
     "repo_url": "https://github.com/ToolJet/ToolJet",
@@ -218,5 +148,75 @@
     "install_surface": "cli",
     "desktop_compatibility": [],
     "last_synced": "2026-09-17T17:24:51Z"
+  },
+  {
+    "repo_url": "https://github.com/ollama/ollama",
+    "name": "ollama",
+    "description": "Get up and running with Kimi, GLM, MiniMax, DeepSeek, gpt-oss, Qwen, Gemma and other models.",
+    "stars": 181249,
+    "forks": 17918,
+    "last_commit_hash": "ec3cc23076c489c988e4e8a85659e48e92dbb734",
+    "category": "software",
+    "purpose": "Ollama allows users to run and manage large language models locally. It provides a command-line interface, a REST API, and integrations with various desktop agents and applications for coding and AI assistance.",
+    "installation": "curl -fsSL https://ollama.com/install.sh | sh",
+    "install_surface": "cli",
+    "desktop_compatibility": [
+      "claude-desktop",
+      "opencode-desktop",
+      "cursor"
+    ],
+    "last_synced": "2026-09-17T17:42:26Z"
+  },
+  {
+    "repo_url": "https://github.com/modelcontextprotocol/inspector",
+    "name": "inspector",
+    "description": "Visual testing tool for MCP servers",
+    "stars": 10902,
+    "forks": 1517,
+    "last_commit_hash": "2e90a628e6296c62e4bef942afbb43d3faa4baf4",
+    "category": "mcp",
+    "purpose": "MCP Inspector is a developer tool designed for inspecting Model Context Protocol (MCP) servers. It offers three interfaces: a web-based UI, a command-line interface (CLI) for automation, and an interactive terminal UI (TUI), all accessible via a single global binary.",
+    "installation": "npx @modelcontextprotocol/inspector",
+    "install_surface": "cli",
+    "desktop_compatibility": [],
+    "last_synced": "2026-09-17T17:42:27Z"
+  },
+  {
+    "repo_url": "https://github.com/wshobson/agents",
+    "name": "agents",
+    "description": "Multi-harness agentic plugin marketplace for Claude Code, Codex, Cursor, OpenCode, GitHub Copilot, Google Antigravity, and Pi",
+    "stars": 39758,
+    "forks": 4238,
+    "last_commit_hash": "4236bb91f8395b0435f1d8b8baf9e8e4c69a8620",
+    "category": "mcp",
+    "purpose": "This repository provides a multi-harness agentic plugin marketplace offering 94 plugins, 202 agents, 183 skills, and 105 commands. It's designed for Claude Code and natively consumed by various other AI coding environments, allowing for the installation of modular workflow building blocks.",
+    "installation": "For Claude Code:\n/plugin marketplace add wshobson/agents\n/plugin install python-development\n\nFor Codex CLI:\nnpx codex-marketplace add wshobson/agents\n\nFor Cursor:\nadd the marketplace, then `/plugin install <name>` (reads .cursor-plugin/ + source)",
+    "install_surface": "mcp_config",
+    "desktop_compatibility": [
+      "claude-code",
+      "codex-cli",
+      "cursor",
+      "opencode",
+      "antigravity-cli",
+      "github-copilot",
+      "pi"
+    ],
+    "last_synced": "2026-09-17T17:42:31Z"
+  },
+  {
+    "repo_url": "https://github.com/anthropics/skills",
+    "name": "skills",
+    "description": "Public repository for Agent Skills",
+    "stars": 176858,
+    "forks": 20936,
+    "last_commit_hash": "34040c9c568585f6929bedeaad110ad08f079624",
+    "category": "mcp",
+    "purpose": "This repository provides a collection of Anthropic's skills for Claude, designed to enhance its performance on specialized tasks. These skills, ranging from creative to technical and enterprise workflows, teach Claude to complete specific tasks repeatably.",
+    "installation": "/plugin marketplace add anthropics/skills\n\nThen, to install a specific set of skills:\n1. Select `Browse and install plugins`\n2. Select `anthropic-agent-skills`\n3. Select `document-skills` or `example-skills`\n4. Select `Install now`\n\nAlternatively, directly install either Plugin via:\n/plugin install document-skills@anthropic-agent-skills\n/plugin install example-skills@anthropic-agent-skills",
+    "install_surface": "cli",
+    "desktop_compatibility": [
+      "claude-desktop"
+    ],
+    "last_synced": "2026-09-17T17:42:33Z"
   }
 ]

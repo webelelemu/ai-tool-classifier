@@ -3,8 +3,8 @@
 ## MCP Servers
 - [DesktopCommanderMCP](https://github.com/wonderwhy-er/DesktopCommanderMCP) - mcp - Desktop Commander MCP provides Claude with terminal control, file system search, and diff file editing capabilities. It  - `npx @wonderwhy-er/desktop-commander@latest setup`
 - [ToolJet](https://github.com/ToolJet/ToolJet) - mcp - ToolJet is an open-source platform for building internal tools, dashboards, and operational apps. It allows users to bui - `ToolJet MCP is currently in beta. See the ToolJet MCP guide (https://docs.tooljet.com/docs/build-wit`
-- [agents](https://github.com/wshobson/agents) - mcp - This project provides a multi-harness agentic plugin marketplace offering 94 plugins, 202 agents, 183 skills, and 105 co - `Claude Code:`
-- [inspector](https://github.com/modelcontextprotocol/inspector) - mcp - MCP Inspector is a developer tool for inspecting Model Context Protocol (MCP) servers. It provides web, CLI, and TUI int - `npx @modelcontextprotocol/inspector`
+- [agents](https://github.com/wshobson/agents) - mcp - This repository provides a multi-harness agentic plugin marketplace offering 94 plugins, 202 agents, 183 skills, and 105 - `For Claude Code:`
+- [inspector](https://github.com/modelcontextprotocol/inspector) - mcp - MCP Inspector is a developer tool designed for inspecting Model Context Protocol (MCP) servers. It offers three interfac - `npx @modelcontextprotocol/inspector`
 - [servers](https://github.com/modelcontextprotocol/servers) - mcp - This repository provides reference implementations for the Model Context Protocol (MCP) servers, showcasing how to give  - `TypeScript-based servers:`
 - [skills](https://github.com/anthropics/skills) - mcp - This repository provides a collection of Anthropic's skills for Claude, designed to enhance its performance on specializ - `/plugin marketplace add anthropics/skills`
 
@@ -13,7 +13,7 @@
 - [superpowers](https://github.com/obra/superpowers) - hermes_agent - Superpowers is a comprehensive software development methodology for coding agents, built upon composable skills and init - `hermes plugins install obra/superpowers --enable`
 
 ## Gateways
-- [litellm](https://github.com/BerriAI/litellm) - gateway - LiteLLM is an open-source AI Gateway providing a unified interface to over 100 LLM providers, including OpenAI, Anthropi - `uv tool install 'litellm[proxy]'`
+- [litellm](https://github.com/BerriAI/litellm) - gateway - LiteLLM is an open-source AI Gateway that provides a unified interface to over 100 LLM providers, allowing users to call - `uv tool install 'litellm[proxy]'`
 
 ## Software
 - [chroma](https://github.com/chroma-core/chroma) - software - Chroma is an open-source data infrastructure for AI, providing search capabilities for embeddings. It allows users to cr - `pip install chromadb`
