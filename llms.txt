@@ -2,6 +2,7 @@
 
 ## MCP Servers
 - [DesktopCommanderMCP](https://github.com/wonderwhy-er/DesktopCommanderMCP) - mcp - Desktop Commander MCP provides Claude with terminal control, file system search, and diff file editing capabilities. It  - `npx @wonderwhy-er/desktop-commander@latest setup`
+- [ToolJet](https://github.com/ToolJet/ToolJet) - mcp - ToolJet is an open-source platform for building internal tools, dashboards, and operational apps. It allows users to bui - `ToolJet MCP is currently in beta. See the ToolJet MCP guide (https://docs.tooljet.com/docs/build-wit`
 - [agents](https://github.com/wshobson/agents) - mcp - This project provides a multi-harness agentic plugin marketplace offering 94 plugins, 202 agents, 183 skills, and 105 co - `Claude Code:`
 - [inspector](https://github.com/modelcontextprotocol/inspector) - mcp - MCP Inspector is a developer tool for inspecting Model Context Protocol (MCP) servers. It provides web, CLI, and TUI int - `npx @modelcontextprotocol/inspector`
 - [servers](https://github.com/modelcontextprotocol/servers) - mcp - This repository provides reference implementations for the Model Context Protocol (MCP) servers, showcasing how to give  - `TypeScript-based servers:`
