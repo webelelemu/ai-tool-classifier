@@ -37,7 +37,7 @@
     "repo_url": "https://github.com/wonderwhy-er/DesktopCommanderMCP",
     "name": "DesktopCommanderMCP",
     "description": "This is MCP server for Claude that gives it terminal control, file system search and diff file editing capabilities",
-    "stars": 9644,
+    "stars": 9646,
     "forks": 1188,
     "last_commit_hash": "092ce0b841e86455f12e41f4dc36399a7522ecb5",
     "category": "mcp",
@@ -47,7 +47,7 @@
     "desktop_compatibility": [
       "claude-desktop"
     ],
-    "last_synced": "2026-09-17T15:58:44Z"
+    "last_synced": "2026-09-17T16:21:59Z"
   },
   {
     "repo_url": "https://github.com/modelcontextprotocol/inspector",
@@ -89,7 +89,7 @@
     "installation": "uv add langchain",
     "install_surface": "cli",
     "desktop_compatibility": [],
-    "last_synced": "2026-09-17T15:58:45Z"
+    "last_synced": "2026-09-17T16:22:04Z"
   },
   {
     "repo_url": "https://github.com/chroma-core/chroma",
@@ -185,5 +185,24 @@
     "install_surface": "cli",
     "desktop_compatibility": [],
     "last_synced": "2026-09-17T10:14:54Z"
+  },
+  {
+    "repo_url": "https://github.com/ToolJet/ToolJet",
+    "name": "ToolJet",
+    "description": "Open-source foundation of ToolJet AI - the enterprise app generation platform for internal tools, dashboards, business applications, workflows and AI agents. Build visually, from a prompt, or from Claude Code, Codex and Cursor over MCP \ud83d\ude80",
+    "stars": 41077,
+    "forks": 5448,
+    "last_commit_hash": "7f406abc0060b7d50a93392a19c2fa8d756e6e26",
+    "category": "mcp",
+    "purpose": "ToolJet is an open-source platform for building internal tools, dashboards, and operational apps. It allows users to build visually, from a prompt, or through coding agents like Claude Code, Codex, and Cursor via its Model Context Protocol (MCP) server.",
+    "installation": "ToolJet MCP is currently in beta. See the ToolJet MCP guide (https://docs.tooljet.com/docs/build-with-ai/mcp/overview) to set it up.\n\ndocker run \\\n  --name tooljet \\\n  --restart unless-stopped \\\n  -p 80:80 \\\n  --platform linux/amd64 \\\n  -v tooljet_data:/var/lib/postgresql/13/main \\\n  tooljet/try:ee-lts-latest",
+    "install_surface": "mcp_config",
+    "desktop_compatibility": [
+      "claude-code",
+      "codex",
+      "grok-build",
+      "cursor"
+    ],
+    "last_synced": "2026-09-17T16:22:01Z"
   }
 ]
