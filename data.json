@@ -14,5 +14,176 @@
       "claude-desktop"
     ],
     "last_synced": "2026-09-15T18:13:06Z"
+  },
+  {
+    "repo_url": "https://github.com/wonderwhy-er/DesktopCommanderMCP",
+    "name": "DesktopCommanderMCP",
+    "description": "This is MCP server for Claude that gives it terminal control, file system search and diff file editing capabilities",
+    "stars": 9619,
+    "forks": 1187,
+    "last_commit_hash": "f9a7c8ef01f01caf7dc9212d457842706f37e295",
+    "category": "mcp",
+    "purpose": "Desktop Commander MCP provides Claude with terminal control, file system search, and diff file editing capabilities. It allows AI to interact with the local machine, execute commands, manage processes, and perform advanced file operations including reading, writing, and editing various document types.",
+    "installation": "npx @wonderwhy-er/desktop-commander@latest setup",
+    "install_surface": "cli",
+    "desktop_compatibility": [
+      "claude-desktop"
+    ],
+    "last_synced": "2026-09-17T10:15:11Z"
+  },
+  {
+    "repo_url": "https://github.com/ollama/ollama",
+    "name": "ollama",
+    "description": "Get up and running with Kimi, GLM, MiniMax, DeepSeek, gpt-oss, Qwen, Gemma and other models.",
+    "stars": 181233,
+    "forks": 17915,
+    "last_commit_hash": "5ed8dde3a7a5bf4c9047a8a91906b4f6788f60b9",
+    "category": "software",
+    "purpose": "Ollama allows users to run and manage large language models locally. It provides a command-line interface, a REST API, and integrations with various desktop agents and applications for coding, AI assistance, and chat.",
+    "installation": "curl -fsSL https://ollama.com/install.sh | sh",
+    "install_surface": "cli",
+    "desktop_compatibility": [
+      "claude-code",
+      "opencode",
+      "cursor"
+    ],
+    "last_synced": "2026-09-17T10:15:13Z"
+  },
+  {
+    "repo_url": "https://github.com/flowiseai/flowise",
+    "name": "flowise",
+    "description": "Build AI Agents, Visually",
+    "stars": 55467,
+    "forks": 25026,
+    "last_commit_hash": "9291856d1ea4a4ceea9f8fef8ce14f4f6c81e8eb",
+    "category": "software",
+    "purpose": "Flowise is a low-code open-source UI tool for building customized LLM (Large Language Model) apps. It allows users to visually construct AI agents and applications by dragging and dropping components.",
+    "installation": "npm install -g flowise\nnpx flowise start",
+    "install_surface": "cli",
+    "desktop_compatibility": [],
+    "last_synced": "2026-09-17T10:15:17Z"
+  },
+  {
+    "repo_url": "https://github.com/langchain-ai/langchain",
+    "name": "langchain",
+    "description": "The agent engineering platform.",
+    "stars": 146506,
+    "forks": 24497,
+    "last_commit_hash": "5c1f28271295bb13034f4cf8964f74c117357d40",
+    "category": "software",
+    "purpose": "LangChain is a framework for building agents and LLM-powered applications, enabling the chaining of interoperable components and third-party integrations. It simplifies AI application development and helps future-proof decisions as underlying technology evolves.",
+    "installation": "uv add langchain",
+    "install_surface": "cli",
+    "desktop_compatibility": [],
+    "last_synced": "2026-09-17T10:15:19Z"
+  },
+  {
+    "repo_url": "https://github.com/modelcontextprotocol/inspector",
+    "name": "inspector",
+    "description": "Visual testing tool for MCP servers",
+    "stars": 10901,
+    "forks": 1517,
+    "last_commit_hash": "2e90a628e6296c62e4bef942afbb43d3faa4baf4",
+    "category": "mcp",
+    "purpose": "MCP Inspector is a developer tool for inspecting Model Context Protocol (MCP) servers. It provides web, CLI, and TUI interfaces to visualize and interact with MCP servers, aiding in development, automation, and agent feedback loops.",
+    "installation": "npx @modelcontextprotocol/inspector",
+    "install_surface": "cli",
+    "desktop_compatibility": [],
+    "last_synced": "2026-09-17T10:15:15Z"
+  },
+  {
+    "repo_url": "https://github.com/chroma-core/chroma",
+    "name": "chroma",
+    "description": "Search infrastructure for AI",
+    "stars": 29315,
+    "forks": 2516,
+    "last_commit_hash": "ec22d992d774d4e9c16743920c4883021cdd0d47",
+    "category": "software",
+    "purpose": "Chroma is an open-source data infrastructure for AI, providing search capabilities for embeddings. It allows users to create collections, add documents with metadata, and perform queries to find similar results.",
+    "installation": "pip install chromadb",
+    "install_surface": "cli",
+    "desktop_compatibility": [],
+    "last_synced": "2026-09-17T10:15:20Z"
+  },
+  {
+    "repo_url": "https://github.com/wshobson/agents",
+    "name": "agents",
+    "description": "Multi-harness agentic plugin marketplace for Claude Code, Codex, Cursor, OpenCode, GitHub Copilot, Google Antigravity, and Pi",
+    "stars": 39749,
+    "forks": 4235,
+    "last_commit_hash": "4236bb91f8395b0435f1d8b8baf9e8e4c69a8620",
+    "category": "mcp",
+    "purpose": "This project provides a multi-harness agentic plugin marketplace offering 94 plugins, 202 agents, 183 skills, and 105 commands. It's designed to be consumed natively by various AI coding environments like Claude Code, OpenAI Codex CLI, Cursor, OpenCode, Antigravity CLI, GitHub Copilot, and Pi from a single Markdown source, providing idiomatic artifacts for each.",
+    "installation": "Claude Code:\n/plugin marketplace add wshobson/agents\n/plugin install python-development\n\nCodex CLI:\nnpx codex-marketplace add wshobson/agents\n\nCursor:\n# Cursor: add the marketplace, then `/plugin install <name>` (reads .cursor-plugin/ + source)\n\nAntigravity CLI:\ngh repo clone wshobson/agents ~/agents && cd ~/agents\nmake generate HARNESS=antigravity && make install-antigravity\n\nOpenCode:\ngh repo clone wshobson/agents ~/agents && cd ~/agents\nmake install-opencode\n\nPi:\ngh repo clone wshobson/agents ~/agents && cd ~/agents\nmake generate HARNESS=pi && make install-pi\n\nSkills only (gh skill):\ngh skill install wshobson/agents\ngh skill install wshobson/agents python-testing-patterns --agent claude-code\n\nSkills only (npx skills):\nnpx skills add wshobson/agents --skill python-testing-patterns",
+    "install_surface": "cli",
+    "desktop_compatibility": [
+      "claude-code",
+      "openai-codex-cli",
+      "cursor",
+      "opencode",
+      "antigravity-cli",
+      "github-copilot",
+      "pi"
+    ],
+    "last_synced": "2026-09-17T10:15:23Z"
+  },
+  {
+    "repo_url": "https://github.com/anthropics/skills",
+    "name": "skills",
+    "description": "Public repository for Agent Skills",
+    "stars": 176790,
+    "forks": 20932,
+    "last_commit_hash": "34040c9c568585f6929bedeaad110ad08f079624",
+    "category": "mcp",
+    "purpose": "This repository provides a collection of Anthropic's skills for Claude, designed to enhance its performance on specialized tasks. These skills, ranging from creative to technical and enterprise workflows, teach Claude to complete specific tasks repeatably by loading dynamic instructions, scripts, and resources.",
+    "installation": "/plugin marketplace add anthropics/skills",
+    "install_surface": "cli",
+    "desktop_compatibility": [
+      "claude-desktop"
+    ],
+    "last_synced": "2026-09-17T10:15:25Z"
+  },
+  {
+    "repo_url": "https://github.com/obra/superpowers",
+    "name": "superpowers",
+    "description": "An agentic skills framework & software development methodology that works.",
+    "stars": 287848,
+    "forks": 25748,
+    "last_commit_hash": "b36e0829c6d0140e93cfef2ca599b1b07d4a7797",
+    "category": "hermes_agent",
+    "purpose": "Superpowers is a comprehensive software development methodology for coding agents, built upon composable skills and initial instructions. It guides agents through brainstorming, design, planning, and subagent-driven development, emphasizing TDD and efficient workflows.",
+    "installation": "hermes plugins install obra/superpowers --enable",
+    "install_surface": "extension",
+    "desktop_compatibility": [
+      "claude-desktop",
+      "antigravity",
+      "codex-app",
+      "codex-cli",
+      "cursor",
+      "devin-cli",
+      "factory-droid",
+      "gemini-cli",
+      "github-copilot-cli",
+      "grok-build-cli",
+      "kimi-code",
+      "opencode",
+      "pi",
+      "hermes-agent"
+    ],
+    "last_synced": "2026-09-17T10:15:27Z"
+  },
+  {
+    "repo_url": "https://github.com/BerriAI/litellm",
+    "name": "litellm",
+    "description": "The fastest, litest AI Gateway. Rust core with Python SDK. Call 100+ LLM APIs in OpenAI (or native) format with cost tracking, guardrails, load balancing, and logging [Bedrock, Azure, OpenAI, Anthropic, OpenAI, VertexAI, vLLM, Nvidia NIM]",
+    "stars": 58971,
+    "forks": 11526,
+    "last_commit_hash": "4b368bf0669cfd3268b780eea6c69497b9a51850",
+    "category": "gateway",
+    "purpose": "LiteLLM is an open-source AI Gateway providing a unified interface to over 100 LLM providers, including OpenAI, Anthropic, and Azure. It can be used as a Python SDK for direct integration or deployed as a centralized proxy server for managing LLM calls with features like cost tracking, guardrails, and load balancing.",
+    "installation": "uv tool install 'litellm[proxy]'\nlitellm --model gpt-4o",
+    "install_surface": "cli",
+    "desktop_compatibility": [],
+    "last_synced": "2026-09-17T10:15:29Z"
   }
 ]
