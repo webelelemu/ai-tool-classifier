@@ -19,9 +19,9 @@
     "repo_url": "https://github.com/ollama/ollama",
     "name": "ollama",
     "description": "Get up and running with Kimi, GLM, MiniMax, DeepSeek, gpt-oss, Qwen, Gemma and other models.",
-    "stars": 181233,
-    "forks": 17915,
-    "last_commit_hash": "5ed8dde3a7a5bf4c9047a8a91906b4f6788f60b9",
+    "stars": 181246,
+    "forks": 17919,
+    "last_commit_hash": "ec3cc23076c489c988e4e8a85659e48e92dbb734",
     "category": "software",
     "purpose": "Ollama allows users to run and manage large language models locally. It provides a command-line interface, a REST API, and integrations with various desktop agents and applications for coding, AI assistance, and chat.",
     "installation": "curl -fsSL https://ollama.com/install.sh | sh",
@@ -31,7 +31,7 @@
       "opencode",
       "cursor"
     ],
-    "last_synced": "2026-09-17T10:14:39Z"
+    "last_synced": "2026-09-17T16:49:57Z"
   },
   {
     "repo_url": "https://github.com/wonderwhy-er/DesktopCommanderMCP",
