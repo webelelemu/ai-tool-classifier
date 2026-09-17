@@ -49,23 +49,27 @@ footer{max-width:1200px;margin:24px auto;padding:0 16px 40px;color:var(--muted);
 <footer><a href="data.json">data.json</a> · <a href="llms.txt">llms.txt</a> · <span id="foot"></span></footer>
 <div class="toast hidden" id="toast">Copied ✓</div>
 <script>
-let DATA=[], shown=0; const PER=50;
+let DATA=[], shown=0, CURRENT_Q=""; const PER=50;
 const CATS=["tool","software","subagent","mcp","skill","hermes_agent","gateway"];
 const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const compact=n=>n>=1000?(n/1000).toFixed(1)+"k":n;
+function lev(a,b){const m=a.length,n=b.length;if(!m)return n;if(!n)return m;let d=Array.from({length:m+1},(_,i)=>{const r=[i];for(let j=1;j<=n;j++)r.push(0);return r;});for(let j=1;j<=n;j++)d[0][j]=j;for(let i=1;i<=m;i++)for(let j=1;j<=n;j++)d[i][j]=Math.min(d[i-1][j]+1,d[i][j-1]+1,d[i-1][j-1]+(a[i-1]===b[j-1]?0:1));return d[m][n];}
+function tokMatch(tok,text){const words=text.toLowerCase().split(/[^a-z0-9+.#]+/);tok=tok.toLowerCase();if(!tok)return true;return words.some(w=>w.includes(tok)||(tok.length>=4&&w.length>=4&&lev(tok,w)<=1));}
+function fuzzyMatch(q,d){const hay=(d.name+" "+d.purpose+" "+d.installation+" "+(d.description||""));return q.toLowerCase().split(/\s+/).filter(Boolean).every(t=>tokMatch(t,hay));}
+function mark(s,q){let out=esc(s);q.toLowerCase().split(/\s+/).filter(t=>t.length>1).forEach(t=>{const e=esc(t),ix=out.toLowerCase().indexOf(e);if(ix>=0)out=out.slice(0,ix)+"<mark>"+out.slice(ix,ix+e.length)+"</mark>";});return out;}
 const params=()=>new URLSearchParams(location.search);
 function state(){const p=params();return{cat:p.get("category")||"",compat:p.get("compatible")||"",q:p.get("q")||""};}
 function syncURL(patch){const p=params();for(const k in patch){patch[k]?p.set(k,patch[k]):p.delete(k);}history.pushState({}, "", "?"+p.toString());}
 function filtered(){const s=state(),q=s.q.toLowerCase();
-  let r=DATA.filter(d=>(!s.cat||d.category===s.cat)&&(!s.compat||(d.desktop_compatibility||[]).includes(s.compat))&&(!q||(d.name+" "+d.purpose+" "+d.installation+" "+(d.description||"")).toLowerCase().includes(q)));
+  let r=DATA.filter(d=>(!s.cat||d.category===s.cat)&&(!s.compat||(d.desktop_compatibility||[]).includes(s.compat))&&(!q||fuzzyMatch(q,d)));
   const by=document.getElementById("sort").value;
   r.sort((a,b)=>by==="stars"?(b.stars-a.stars):by==="updated"?String(b.last_synced).localeCompare(String(a.last_synced)):a.name.localeCompare(b.name));
   return r;}
-function card(d){return `<article class="card"><h3><a href="${esc(d.repo_url)}">${esc(d.name)}</a></h3>
+function card(d){return `<article class="card"><h3><a href="${esc(d.repo_url)}">${mark(d.name,CURRENT_Q)}</a></h3>
   <div><span class="cat ${esc(d.category)}">${esc(d.category)}</span> <span class="badge">★ ${compact(d.stars)}</span> <span class="badge">${esc(d.install_surface||"")}</span>${d.affiliate_candidate?' <span class="badge">Affiliate link</span>':""}</div>
-  <p class="purpose">${esc(d.purpose)}</p><pre>${esc((d.installation||"").split("\n")[0])}</pre>
+  <p class="purpose">${mark(d.purpose,CURRENT_Q)}</p><pre>${esc((d.installation||"").split("\n")[0])}</pre>
   <div class="meta"><span>⑂ ${d.forks}</span><span>${esc(d.last_synced||"").slice(0,10)}</span><button data-copy="${esc(d.installation||"")}">Copy</button><button data-repo="${esc(d.repo_url)}">Details</button></div></article>`;}
-function render(reset){const r=filtered();if(reset)shown=0;shown+=PER;
+function render(reset){CURRENT_Q=state().q;const r=filtered();if(reset)shown=0;shown+=PER;
   document.getElementById("grid").innerHTML=r.slice(0,shown).map(card).join("")||"<p>No matches - try All categories</p>";
   document.getElementById("count").textContent=r.length+" items";
   document.getElementById("more").classList.toggle("hidden",shown>=r.length);}
