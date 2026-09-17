@@ -21,7 +21,7 @@
     "description": "This is MCP server for Claude that gives it terminal control, file system search and diff file editing capabilities",
     "stars": 9619,
     "forks": 1187,
-    "last_commit_hash": "f9a7c8ef01f01caf7dc9212d457842706f37e295",
+    "last_commit_hash": "32fd31e0230c350600d24b67ea29a0d2b4f11f7f",
     "category": "mcp",
     "purpose": "Desktop Commander MCP provides Claude with terminal control, file system search, and diff file editing capabilities. It allows AI to interact with the local machine, execute commands, manage processes, and perform advanced file operations including reading, writing, and editing various document types.",
     "installation": "npx @wonderwhy-er/desktop-commander@latest setup",
@@ -29,7 +29,7 @@
     "desktop_compatibility": [
       "claude-desktop"
     ],
-    "last_synced": "2026-09-17T10:15:15Z"
+    "last_synced": "2026-09-17T10:41:51Z"
   },
   {
     "repo_url": "https://github.com/ollama/ollama",
