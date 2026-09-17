@@ -37,9 +37,9 @@
     "repo_url": "https://github.com/wonderwhy-er/DesktopCommanderMCP",
     "name": "DesktopCommanderMCP",
     "description": "This is MCP server for Claude that gives it terminal control, file system search and diff file editing capabilities",
-    "stars": 9622,
-    "forks": 1187,
-    "last_commit_hash": "08ff76192919a6e8fe2557b39c3f99e7b54c3b92",
+    "stars": 9644,
+    "forks": 1188,
+    "last_commit_hash": "092ce0b841e86455f12e41f4dc36399a7522ecb5",
     "category": "mcp",
     "purpose": "Desktop Commander MCP provides Claude with terminal control, file system search, and diff file editing capabilities. It allows AI to interact with the local machine, execute commands, manage processes, and perform advanced file operations including reading, writing, and editing various document types.",
     "installation": "npx @wonderwhy-er/desktop-commander@latest setup",
@@ -47,7 +47,7 @@
     "desktop_compatibility": [
       "claude-desktop"
     ],
-    "last_synced": "2026-09-17T11:12:39Z"
+    "last_synced": "2026-09-17T15:58:44Z"
   },
   {
     "repo_url": "https://github.com/modelcontextprotocol/inspector",
@@ -81,15 +81,15 @@
     "repo_url": "https://github.com/langchain-ai/langchain",
     "name": "langchain",
     "description": "The agent engineering platform.",
-    "stars": 146506,
-    "forks": 24497,
-    "last_commit_hash": "5c1f28271295bb13034f4cf8964f74c117357d40",
+    "stars": 146528,
+    "forks": 24503,
+    "last_commit_hash": "b3ec70925f9bacce286f4e7e41f5d1d357c72bab",
     "category": "software",
     "purpose": "LangChain is a framework for building agents and LLM-powered applications, enabling the chaining of interoperable components and third-party integrations. It simplifies AI application development and helps future-proof decisions as underlying technology evolves.",
     "installation": "uv add langchain",
     "install_surface": "cli",
     "desktop_compatibility": [],
-    "last_synced": "2026-09-17T10:14:44Z"
+    "last_synced": "2026-09-17T15:58:45Z"
   },
   {
     "repo_url": "https://github.com/chroma-core/chroma",
