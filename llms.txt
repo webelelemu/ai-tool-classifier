@@ -9,6 +9,7 @@
 - [skills](https://github.com/anthropics/skills) - mcp - This repository provides a collection of Anthropic's skills for Claude, designed to enhance its performance on specializ - `/plugin marketplace add anthropics/skills`
 
 ## Hermes Agents
+- [hermes-agent](https://github.com/NousResearch/hermes-agent) - hermes_agent - Hermes Agent is a self-improving AI agent that learns from experience, creates and refines skills, and builds a deep und - `Linux, macOS, WSL2, Termux:`
 - [superpowers](https://github.com/obra/superpowers) - hermes_agent - Superpowers is a comprehensive software development methodology for coding agents, built upon composable skills and init - `hermes plugins install obra/superpowers --enable`
 
 ## Gateways
