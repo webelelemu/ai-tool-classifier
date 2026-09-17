@@ -29,7 +29,7 @@
     "desktop_compatibility": [
       "claude-desktop"
     ],
-    "last_synced": "2026-09-17T10:15:11Z"
+    "last_synced": "2026-09-17T10:15:15Z"
   },
   {
     "repo_url": "https://github.com/ollama/ollama",
@@ -47,20 +47,6 @@
       "opencode",
       "cursor"
     ],
-    "last_synced": "2026-09-17T10:15:13Z"
-  },
-  {
-    "repo_url": "https://github.com/flowiseai/flowise",
-    "name": "flowise",
-    "description": "Build AI Agents, Visually",
-    "stars": 55467,
-    "forks": 25026,
-    "last_commit_hash": "9291856d1ea4a4ceea9f8fef8ce14f4f6c81e8eb",
-    "category": "software",
-    "purpose": "Flowise is a low-code open-source UI tool for building customized LLM (Large Language Model) apps. It allows users to visually construct AI agents and applications by dragging and dropping components.",
-    "installation": "npm install -g flowise\nnpx flowise start",
-    "install_surface": "cli",
-    "desktop_compatibility": [],
     "last_synced": "2026-09-17T10:15:17Z"
   },
   {
@@ -75,7 +61,7 @@
     "installation": "uv add langchain",
     "install_surface": "cli",
     "desktop_compatibility": [],
-    "last_synced": "2026-09-17T10:15:19Z"
+    "last_synced": "2026-09-17T10:15:21Z"
   },
   {
     "repo_url": "https://github.com/modelcontextprotocol/inspector",
@@ -89,7 +75,21 @@
     "installation": "npx @modelcontextprotocol/inspector",
     "install_surface": "cli",
     "desktop_compatibility": [],
-    "last_synced": "2026-09-17T10:15:15Z"
+    "last_synced": "2026-09-17T10:15:18Z"
+  },
+  {
+    "repo_url": "https://github.com/flowiseai/flowise",
+    "name": "flowise",
+    "description": "Build AI Agents, Visually",
+    "stars": 55467,
+    "forks": 25026,
+    "last_commit_hash": "9291856d1ea4a4ceea9f8fef8ce14f4f6c81e8eb",
+    "category": "software",
+    "purpose": "Flowise is a low-code open-source UI tool for building customized LLM (Large Language Model) apps. It allows users to visually construct AI agents and applications by dragging and dropping components.",
+    "installation": "npm install -g flowise\nnpx flowise start",
+    "install_surface": "cli",
+    "desktop_compatibility": [],
+    "last_synced": "2026-09-17T10:15:20Z"
   },
   {
     "repo_url": "https://github.com/chroma-core/chroma",
@@ -103,7 +103,7 @@
     "installation": "pip install chromadb",
     "install_surface": "cli",
     "desktop_compatibility": [],
-    "last_synced": "2026-09-17T10:15:20Z"
+    "last_synced": "2026-09-17T10:15:23Z"
   },
   {
     "repo_url": "https://github.com/wshobson/agents",
@@ -125,7 +125,7 @@
       "github-copilot",
       "pi"
     ],
-    "last_synced": "2026-09-17T10:15:23Z"
+    "last_synced": "2026-09-17T10:15:26Z"
   },
   {
     "repo_url": "https://github.com/anthropics/skills",
@@ -141,7 +141,7 @@
     "desktop_compatibility": [
       "claude-desktop"
     ],
-    "last_synced": "2026-09-17T10:15:25Z"
+    "last_synced": "2026-09-17T10:15:27Z"
   },
   {
     "repo_url": "https://github.com/obra/superpowers",
@@ -170,7 +170,7 @@
       "pi",
       "hermes-agent"
     ],
-    "last_synced": "2026-09-17T10:15:27Z"
+    "last_synced": "2026-09-17T10:15:29Z"
   },
   {
     "repo_url": "https://github.com/BerriAI/litellm",
@@ -184,6 +184,6 @@
     "installation": "uv tool install 'litellm[proxy]'\nlitellm --model gpt-4o",
     "install_surface": "cli",
     "desktop_compatibility": [],
-    "last_synced": "2026-09-17T10:15:29Z"
+    "last_synced": "2026-09-17T10:15:31Z"
   }
 ]
