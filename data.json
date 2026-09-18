@@ -49,29 +49,29 @@
     "repo_url": "https://github.com/langchain-ai/langchain",
     "name": "langchain",
     "description": "The agent engineering platform.",
-    "stars": 146595,
-    "forks": 24514,
-    "last_commit_hash": "5bf6a15466cad3313a4ba906a88486215f0f42b7",
+    "stars": 146606,
+    "forks": 24515,
+    "last_commit_hash": "eba445b7563d1709427bd8072892975a6ea59fdc",
     "category": "software",
-    "purpose": "LangChain is a framework for building agents and LLM-powered applications. It helps chain together interoperable components and third-party integrations to simplify AI application development, while future-proofing decisions as the underlying technology evolves.",
-    "installation": "uv add langchain\n\nfrom langchain.chat_models import init_chat_model\n\nmodel = init_chat_model(\"openai:gpt-5.5\")\nresult = model.invoke(\"Hello, world!\")",
-    "install_surface": "library",
+    "purpose": "LangChain is a framework for building agents and LLM-powered applications, enabling the chaining of interoperable components and third-party integrations. It simplifies AI application development and helps future-proof decisions as underlying technologies evolve.",
+    "installation": "uv add langchain",
+    "install_surface": "cli",
     "desktop_compatibility": [],
-    "last_synced": "2026-09-18T15:34:12Z"
+    "last_synced": "2026-09-18T20:14:14Z"
   },
   {
     "repo_url": "https://github.com/chroma-core/chroma",
     "name": "chroma",
     "description": "Search infrastructure for AI",
-    "stars": 29315,
-    "forks": 2516,
-    "last_commit_hash": "ec22d992d774d4e9c16743920c4883021cdd0d47",
-    "category": "software",
+    "stars": 29326,
+    "forks": 2519,
+    "last_commit_hash": "0dad2c71e5a6104d889048dc705f41686ae98122",
+    "category": "tool",
     "purpose": "Chroma is an open-source data infrastructure for AI, providing search capabilities for embeddings. It allows users to create collections, add documents with metadata, and perform queries to find similar results.",
-    "installation": "pip install chromadb",
+    "installation": "pip install chromadb # python client\n# for javascript, npm install chromadb!\n# for client-server mode, chroma run --path /chroma_db_path",
     "install_surface": "cli",
     "desktop_compatibility": [],
-    "last_synced": "2026-09-17T10:14:45Z"
+    "last_synced": "2026-09-18T20:14:15Z"
   },
   {
     "repo_url": "https://github.com/obra/superpowers",
@@ -106,15 +106,15 @@
     "repo_url": "https://github.com/BerriAI/litellm",
     "name": "litellm",
     "description": "The fastest, litest AI Gateway. Rust core with Python SDK. Call 100+ LLM APIs in OpenAI (or native) format with cost tracking, guardrails, load balancing, and logging [Bedrock, Azure, OpenAI, Anthropic, OpenAI, VertexAI, vLLM, Nvidia NIM]",
-    "stars": 59064,
-    "forks": 11549,
-    "last_commit_hash": "8fc9c46d1aeda6d009718cd22684a526fa4647fd",
+    "stars": 59094,
+    "forks": 11567,
+    "last_commit_hash": "6e3b6d6d032b3fc601a354ded51661031db351a7",
     "category": "gateway",
     "purpose": "LiteLLM is an open-source AI Gateway that provides a unified interface to over 100 LLM providers, allowing users to call any LLM in OpenAI format. It can be used as a Python SDK for direct integration or deployed as a centralized AI Gateway (Proxy Server) for teams.",
     "installation": "uv tool install 'litellm[proxy]'\nlitellm --model gpt-4o",
     "install_surface": "cli",
     "desktop_compatibility": [],
-    "last_synced": "2026-09-18T10:20:47Z"
+    "last_synced": "2026-09-18T20:14:17Z"
   },
   {
     "repo_url": "https://github.com/ToolJet/ToolJet",
@@ -138,23 +138,23 @@
     "repo_url": "https://github.com/NousResearch/hermes-agent",
     "name": "hermes-agent",
     "description": "The agent that grows with you",
-    "stars": 246811,
-    "forks": 51745,
-    "last_commit_hash": "c661785f872b5647fbac7c138d965180783bd9af",
+    "stars": 246871,
+    "forks": 51770,
+    "last_commit_hash": "877848d2f32cc0c8126abe9032e3ced5aa6f0370",
     "category": "hermes_agent",
     "purpose": "Hermes Agent is a self-improving AI agent that learns from experience, creates and refines skills, and builds a deepening model of the user across sessions. It supports various LLM providers and can run on diverse infrastructure, including cloud VMs and local machines.",
     "installation": "Linux, macOS, WSL2, Termux:\n```bash\ncurl -fsSL https://hermes-agent.nousresearch.com/install.sh | bash\n```\nWindows (native, PowerShell):\n```powershell\niex (irm https://hermes-agent.nousresearch.com/install.ps1)\n```\nAfter installation:\n```bash\nsource ~/.bashrc    # reload shell (or: source ~/.zshrc)\nhermes              # start chatting!\n```",
     "install_surface": "cli",
     "desktop_compatibility": [],
-    "last_synced": "2026-09-18T15:34:14Z"
+    "last_synced": "2026-09-18T20:14:20Z"
   },
   {
     "repo_url": "https://github.com/ollama/ollama",
     "name": "ollama",
     "description": "Get up and running with Kimi, GLM, MiniMax, DeepSeek, gpt-oss, Qwen, Gemma and other models.",
-    "stars": 181181,
-    "forks": 17920,
-    "last_commit_hash": "4f6f73983036588ec22059a27c9bbb00b3ce332f",
+    "stars": 181224,
+    "forks": 17923,
+    "last_commit_hash": "9a44d9d8de7127851bc30ea88629d9c0d2595a3a",
     "category": "software",
     "purpose": "Ollama allows users to run and manage large language models locally. It provides a command-line interface, a REST API, and integrations with various desktop agents and applications for coding and AI assistance.",
     "installation": "curl -fsSL https://ollama.com/install.sh | sh",
@@ -164,7 +164,7 @@
       "opencode-desktop",
       "cursor"
     ],
-    "last_synced": "2026-09-18T02:33:13Z"
+    "last_synced": "2026-09-18T20:14:12Z"
   },
   {
     "repo_url": "https://github.com/modelcontextprotocol/inspector",
