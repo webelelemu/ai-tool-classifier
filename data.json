@@ -49,15 +49,15 @@
     "repo_url": "https://github.com/langchain-ai/langchain",
     "name": "langchain",
     "description": "The agent engineering platform.",
-    "stars": 146557,
-    "forks": 24507,
-    "last_commit_hash": "3ecff312901725b6b81529eabc778d3d7dd46666",
+    "stars": 146584,
+    "forks": 24509,
+    "last_commit_hash": "fd4f1615359371fbb1b3b2de9183a18a15ee9e34",
     "category": "software",
     "purpose": "LangChain is a framework for building agents and LLM-powered applications, enabling the chaining of interoperable components and third-party integrations. It simplifies AI application development and helps future-proof decisions as underlying technologies evolve.",
     "installation": "uv add langchain",
     "install_surface": "cli",
     "desktop_compatibility": [],
-    "last_synced": "2026-09-18T02:33:14Z"
+    "last_synced": "2026-09-18T10:20:45Z"
   },
   {
     "repo_url": "https://github.com/chroma-core/chroma",
@@ -106,48 +106,47 @@
     "repo_url": "https://github.com/BerriAI/litellm",
     "name": "litellm",
     "description": "The fastest, litest AI Gateway. Rust core with Python SDK. Call 100+ LLM APIs in OpenAI (or native) format with cost tracking, guardrails, load balancing, and logging [Bedrock, Azure, OpenAI, Anthropic, OpenAI, VertexAI, vLLM, Nvidia NIM]",
-    "stars": 59028,
-    "forks": 11539,
-    "last_commit_hash": "ea047e5133991ce8decb1717e3a65d00f9261df7",
+    "stars": 59064,
+    "forks": 11549,
+    "last_commit_hash": "8fc9c46d1aeda6d009718cd22684a526fa4647fd",
     "category": "gateway",
     "purpose": "LiteLLM is an open-source AI Gateway that provides a unified interface to over 100 LLM providers, allowing users to call any LLM in OpenAI format. It can be used as a Python SDK for direct integration or deployed as a centralized AI Gateway (Proxy Server) for teams.",
     "installation": "uv tool install 'litellm[proxy]'\nlitellm --model gpt-4o",
     "install_surface": "cli",
     "desktop_compatibility": [],
-    "last_synced": "2026-09-18T02:33:16Z"
+    "last_synced": "2026-09-18T10:20:47Z"
   },
   {
     "repo_url": "https://github.com/ToolJet/ToolJet",
     "name": "ToolJet",
     "description": "Open-source foundation of ToolJet AI - the enterprise app generation platform for internal tools, dashboards, business applications, workflows and AI agents. Build visually, from a prompt, or from Claude Code, Codex and Cursor over MCP \ud83d\ude80",
-    "stars": 41077,
-    "forks": 5448,
-    "last_commit_hash": "7f406abc0060b7d50a93392a19c2fa8d756e6e26",
+    "stars": 40938,
+    "forks": 5449,
+    "last_commit_hash": "5fb823ad1cf707332b636208d6b43adb69a1835f",
     "category": "mcp",
     "purpose": "ToolJet is an open-source platform for building internal tools, dashboards, and operational apps. It allows users to build visually, from a prompt, or through coding agents like Claude Code, Codex, and Cursor via its Model Context Protocol (MCP) server.",
-    "installation": "ToolJet MCP is currently in beta. See the ToolJet MCP guide (https://docs.tooljet.com/docs/build-with-ai/mcp/overview) to set it up.\n\ndocker run \\\n  --name tooljet \\\n  --restart unless-stopped \\\n  -p 80:80 \\\n  --platform linux/amd64 \\\n  -v tooljet_data:/var/lib/postgresql/13/main \\\n  tooljet/try:ee-lts-latest",
+    "installation": "ToolJet MCP is currently in beta. See the ToolJet MCP guide (https://docs.tooljet.com/docs/build-with-ai/mcp/overview) to set it up.\n\nQuickstart with Docker:\ndocker run \\\n  --name tooljet \\\n  --restart unless-stopped \\\n  -p 80:80 \\\n  --platform linux/amd64 \\\n  -v tooljet_data:/var/lib/postgresql/13/main \\\n  tooljet/try:ee-lts-latest",
     "install_surface": "mcp_config",
     "desktop_compatibility": [
-      "claude-code",
-      "codex",
-      "grok-build",
+      "claude-desktop",
+      "opencode-desktop",
       "cursor"
     ],
-    "last_synced": "2026-09-17T16:22:01Z"
+    "last_synced": "2026-09-18T10:20:43Z"
   },
   {
     "repo_url": "https://github.com/NousResearch/hermes-agent",
     "name": "hermes-agent",
     "description": "The agent that grows with you",
-    "stars": 246585,
-    "forks": 51654,
-    "last_commit_hash": "e83b1d51f13a08b424636f0b519db86a35aa7bd7",
+    "stars": 246722,
+    "forks": 51695,
+    "last_commit_hash": "debfc7420b61a96ad97fc03b18cca74d7e72697d",
     "category": "hermes_agent",
     "purpose": "Hermes Agent is a self-improving AI agent that learns from experience, creates and refines skills, and builds a deepening model of the user across sessions. It supports various LLM providers and can run on diverse infrastructure, including cloud VMs and local machines.",
     "installation": "Linux, macOS, WSL2, Termux:\n```bash\ncurl -fsSL https://hermes-agent.nousresearch.com/install.sh | bash\n```\nWindows (native, PowerShell):\n```powershell\niex (irm https://hermes-agent.nousresearch.com/install.ps1)\n```\nAfter installation:\n```bash\nsource ~/.bashrc    # reload shell (or: source ~/.zshrc)\nhermes              # start chatting!\n```",
     "install_surface": "cli",
     "desktop_compatibility": [],
-    "last_synced": "2026-09-18T02:33:17Z"
+    "last_synced": "2026-09-18T10:20:49Z"
   },
   {
     "repo_url": "https://github.com/ollama/ollama",
