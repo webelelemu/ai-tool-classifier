@@ -49,15 +49,15 @@
     "repo_url": "https://github.com/langchain-ai/langchain",
     "name": "langchain",
     "description": "The agent engineering platform.",
-    "stars": 146584,
-    "forks": 24509,
-    "last_commit_hash": "fd4f1615359371fbb1b3b2de9183a18a15ee9e34",
+    "stars": 146595,
+    "forks": 24514,
+    "last_commit_hash": "5bf6a15466cad3313a4ba906a88486215f0f42b7",
     "category": "software",
-    "purpose": "LangChain is a framework for building agents and LLM-powered applications, enabling the chaining of interoperable components and third-party integrations. It simplifies AI application development and helps future-proof decisions as underlying technologies evolve.",
-    "installation": "uv add langchain",
-    "install_surface": "cli",
+    "purpose": "LangChain is a framework for building agents and LLM-powered applications. It helps chain together interoperable components and third-party integrations to simplify AI application development, while future-proofing decisions as the underlying technology evolves.",
+    "installation": "uv add langchain\n\nfrom langchain.chat_models import init_chat_model\n\nmodel = init_chat_model(\"openai:gpt-5.5\")\nresult = model.invoke(\"Hello, world!\")",
+    "install_surface": "library",
     "desktop_compatibility": [],
-    "last_synced": "2026-09-18T10:20:45Z"
+    "last_synced": "2026-09-18T15:34:12Z"
   },
   {
     "repo_url": "https://github.com/chroma-core/chroma",
@@ -138,15 +138,15 @@
     "repo_url": "https://github.com/NousResearch/hermes-agent",
     "name": "hermes-agent",
     "description": "The agent that grows with you",
-    "stars": 246722,
-    "forks": 51695,
-    "last_commit_hash": "debfc7420b61a96ad97fc03b18cca74d7e72697d",
+    "stars": 246811,
+    "forks": 51745,
+    "last_commit_hash": "c661785f872b5647fbac7c138d965180783bd9af",
     "category": "hermes_agent",
     "purpose": "Hermes Agent is a self-improving AI agent that learns from experience, creates and refines skills, and builds a deepening model of the user across sessions. It supports various LLM providers and can run on diverse infrastructure, including cloud VMs and local machines.",
     "installation": "Linux, macOS, WSL2, Termux:\n```bash\ncurl -fsSL https://hermes-agent.nousresearch.com/install.sh | bash\n```\nWindows (native, PowerShell):\n```powershell\niex (irm https://hermes-agent.nousresearch.com/install.ps1)\n```\nAfter installation:\n```bash\nsource ~/.bashrc    # reload shell (or: source ~/.zshrc)\nhermes              # start chatting!\n```",
     "install_surface": "cli",
     "desktop_compatibility": [],
-    "last_synced": "2026-09-18T10:20:49Z"
+    "last_synced": "2026-09-18T15:34:14Z"
   },
   {
     "repo_url": "https://github.com/ollama/ollama",
