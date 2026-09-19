@@ -108,15 +108,15 @@
     "repo_url": "https://github.com/BerriAI/litellm",
     "name": "litellm",
     "description": "The fastest, litest AI Gateway. Rust core with Python SDK. Call 100+ LLM APIs in OpenAI (or native) format with cost tracking, guardrails, load balancing, and logging [Bedrock, Azure, OpenAI, Anthropic, OpenAI, VertexAI, vLLM, Nvidia NIM]",
-    "stars": 59115,
-    "forks": 11569,
-    "last_commit_hash": "c4ddea7cfc422da282929ed3ff11cbc225bd34c9",
+    "stars": 59133,
+    "forks": 11571,
+    "last_commit_hash": "5fc510a6fda3da8c9c928191720a1b566c9a9b80",
     "category": "gateway",
     "purpose": "LiteLLM is an open-source AI Gateway that provides a unified interface to over 100 LLM providers, allowing users to call any LLM in OpenAI format. It can be used as a Python SDK for direct integration or deployed as a centralized AI Gateway (Proxy Server) for teams.",
     "installation": "uv tool install 'litellm[proxy]'\nlitellm --model gpt-4o",
     "install_surface": "cli",
     "desktop_compatibility": [],
-    "last_synced": "2026-09-19T02:32:30Z"
+    "last_synced": "2026-09-19T10:04:12Z"
   },
   {
     "repo_url": "https://github.com/ToolJet/ToolJet",
@@ -140,15 +140,15 @@
     "repo_url": "https://github.com/NousResearch/hermes-agent",
     "name": "hermes-agent",
     "description": "The agent that grows with you",
-    "stars": 246933,
-    "forks": 51806,
-    "last_commit_hash": "1f3cb8bee1bb9d84cfe82e7a66cd94c37afed516",
+    "stars": 247011,
+    "forks": 51843,
+    "last_commit_hash": "b8390ee2e5a9556a242486b830ca1e59565543a4",
     "category": "hermes_agent",
     "purpose": "Hermes Agent is a self-improving AI agent that learns from experience, creates and refines skills, and builds a deepening model of the user across sessions. It supports various LLM providers and can run on diverse infrastructure, including cloud VMs and local machines.",
     "installation": "Linux, macOS, WSL2, Termux:\n```bash\ncurl -fsSL https://hermes-agent.nousresearch.com/install.sh | bash\n```\nWindows (native, PowerShell):\n```powershell\niex (irm https://hermes-agent.nousresearch.com/install.ps1)\n```\nAfter installation:\n```bash\nsource ~/.bashrc    # reload shell (or: source ~/.zshrc)\nhermes              # start chatting!\n```",
     "install_surface": "cli",
     "desktop_compatibility": [],
-    "last_synced": "2026-09-19T02:32:32Z"
+    "last_synced": "2026-09-19T10:04:14Z"
   },
   {
     "repo_url": "https://github.com/ollama/ollama",
