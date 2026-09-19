@@ -10,7 +10,7 @@
 
 ## Hermes Agents
 - [hermes-agent](https://github.com/NousResearch/hermes-agent) - hermes_agent - Hermes Agent is a self-improving AI agent that learns from experience, creates and refines skills, and builds a deepenin - `Linux, macOS, WSL2, Termux:`
-- [superpowers](https://github.com/obra/superpowers) - hermes_agent - Superpowers is a comprehensive software development methodology for coding agents, built upon composable skills and init - `hermes plugins install obra/superpowers --enable`
+- [superpowers](https://github.com/obra/superpowers) - hermes_agent - Superpowers is a comprehensive software development methodology implemented as an agentic skills framework. It guides co - `hermes plugins install obra/superpowers --enable`
 
 ## Gateways
 - [litellm](https://github.com/BerriAI/litellm) - gateway - LiteLLM is an open-source AI Gateway that provides a unified interface to over 100 LLM providers, allowing users to call - `uv tool install 'litellm[proxy]'`
