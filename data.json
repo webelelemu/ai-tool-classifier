@@ -49,15 +49,15 @@
     "repo_url": "https://github.com/langchain-ai/langchain",
     "name": "langchain",
     "description": "The agent engineering platform.",
-    "stars": 146691,
-    "forks": 24528,
-    "last_commit_hash": "68754c23c956e16cdebec00dcfe076257b4278ed",
+    "stars": 146746,
+    "forks": 24541,
+    "last_commit_hash": "4af7ab8fcb98c2dc211d9e34cddedffa23eba4d9",
     "category": "software",
-    "purpose": "LangChain is a framework for building agents and LLM-powered applications. It helps chain together interoperable components and third-party integrations to simplify AI application development, while future-proofing decisions as the underlying technology evolves.",
-    "installation": "uv add langchain\n\nfrom langchain.chat_models import init_chat_model\n\nmodel = init_chat_model(\"openai:gpt-5.5\")\nresult = model.invoke(\"Hello, world!\")",
-    "install_surface": "library",
+    "purpose": "LangChain is a framework for building agents and LLM-powered applications, enabling the chaining of interoperable components and third-party integrations. It simplifies AI application development and helps future-proof decisions as underlying technologies evolve.",
+    "installation": "uv add langchain",
+    "install_surface": "cli",
     "desktop_compatibility": [],
-    "last_synced": "2026-09-20T02:43:55Z"
+    "last_synced": "2026-09-20T20:05:18Z"
   },
   {
     "repo_url": "https://github.com/chroma-core/chroma",
@@ -108,15 +108,15 @@
     "repo_url": "https://github.com/BerriAI/litellm",
     "name": "litellm",
     "description": "The fastest, litest AI Gateway. Rust core with Python SDK. Call 100+ LLM APIs in OpenAI (or native) format with cost tracking, guardrails, load balancing, and logging [Bedrock, Azure, OpenAI, Anthropic, OpenAI, VertexAI, vLLM, Nvidia NIM]",
-    "stars": 59223,
-    "forks": 11607,
-    "last_commit_hash": "0f7d4dc13b493dd6bfe1d03346e309a6494b1711",
+    "stars": 59240,
+    "forks": 11617,
+    "last_commit_hash": "c20135621f2cc672d57b564272313956be4cb563",
     "category": "gateway",
     "purpose": "LiteLLM is an open-source AI Gateway that provides a unified interface to call over 100 LLM providers using the OpenAI format. It can be used as a Python SDK for direct integration or deployed as a centralized proxy server for teams.",
     "installation": "uv tool install 'litellm[proxy]'\nlitellm --model gpt-4o",
     "install_surface": "cli",
     "desktop_compatibility": [],
-    "last_synced": "2026-09-20T15:12:13Z"
+    "last_synced": "2026-09-20T20:05:20Z"
   },
   {
     "repo_url": "https://github.com/ToolJet/ToolJet",
@@ -140,15 +140,15 @@
     "repo_url": "https://github.com/NousResearch/hermes-agent",
     "name": "hermes-agent",
     "description": "The agent that grows with you",
-    "stars": 247382,
-    "forks": 52012,
-    "last_commit_hash": "e10934b03e115b036b3c38b9c6e6817039a5962d",
+    "stars": 247438,
+    "forks": 52045,
+    "last_commit_hash": "3a6e96352230b25a58414ec303e4a0b049741b89",
     "category": "hermes_agent",
     "purpose": "Hermes Agent is a self-improving AI agent that learns from experience, creates and refines skills, and builds a deepening model of the user across sessions. It supports various LLM providers and can run on diverse infrastructure, including cloud VMs and local machines.",
     "installation": "Linux, macOS, WSL2, Termux:\n```bash\ncurl -fsSL https://hermes-agent.nousresearch.com/install.sh | bash\n```\nWindows (native, PowerShell):\n```powershell\niex (irm https://hermes-agent.nousresearch.com/install.ps1)\n```\nAfter installation:\n```bash\nsource ~/.bashrc    # reload shell (or: source ~/.zshrc)\nhermes              # start chatting!\n```",
     "install_surface": "cli",
     "desktop_compatibility": [],
-    "last_synced": "2026-09-20T15:12:15Z"
+    "last_synced": "2026-09-20T20:05:23Z"
   },
   {
     "repo_url": "https://github.com/ollama/ollama",
