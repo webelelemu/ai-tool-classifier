@@ -20,5 +20,5 @@
 
 ## Software
 - [flowise](https://github.com/flowiseai/flowise) - software - Flowise is a low-code open-source UI tool for building customized LLM (Large Language Model) apps. It allows users to vi - `npm install -g flowise`
-- [langchain](https://github.com/langchain-ai/langchain) - software - LangChain is a framework for building agents and LLM-powered applications. It helps chain together interoperable compone - `uv add langchain`
+- [langchain](https://github.com/langchain-ai/langchain) - software - LangChain is a framework for building agents and LLM-powered applications, enabling the chaining of interoperable compon - `uv add langchain`
 - [ollama](https://github.com/ollama/ollama) - software - Ollama allows users to run and manage large language models locally. It provides a command-line interface, a REST API, a - `curl -fsSL https://ollama.com/install.sh | sh`
