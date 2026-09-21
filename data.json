@@ -21,7 +21,7 @@
     "description": "This is MCP server for Claude that gives it terminal control, file system search and diff file editing capabilities",
     "stars": 9687,
     "forks": 1213,
-    "last_commit_hash": "d217d490afb11e655c02b52146d443b1bcf1dcb1",
+    "last_commit_hash": "da36b38329fa41e993a59c979e1935648f542f1e",
     "category": "mcp",
     "purpose": "Desktop Commander MCP provides AI with terminal control, file system search, and diff file editing capabilities. It allows users to manage files, run processes, and automate tasks on their local machine through Model Context Protocol.",
     "installation": "Add this entry to your claude_desktop_config.json:\n\n- On Mac: `~/Library/Application Support/Claude/claude_desktop_config.json`\n- On Windows: `%APPDATA%\\Claude\\claude_desktop_config.json`\n- On Linux: `~/.config/Claude/claude_desktop_config.json`\n\n```json\n{\n  \"mcpServers\": {\n    \"desktop-commander\": {\n      \"command\": \"npx\",\n      \"args\": [\n        \"-y\",\n        \"@wonderwhy-er/desktop-commander@latest\"\n      ]\n    }\n  }\n}\n```\nRestart Claude if running.",
@@ -29,7 +29,7 @@
     "desktop_compatibility": [
       "claude-desktop"
     ],
-    "last_synced": "2026-09-21T17:34:55Z"
+    "last_synced": "2026-09-21T21:30:48Z"
   },
   {
     "repo_url": "https://github.com/flowiseai/flowise",
@@ -49,15 +49,15 @@
     "repo_url": "https://github.com/langchain-ai/langchain",
     "name": "langchain",
     "description": "The agent engineering platform.",
-    "stars": 146800,
-    "forks": 24549,
-    "last_commit_hash": "9762d685c7adcab7684fd3c8ca45c82fbc717a6f",
+    "stars": 146821,
+    "forks": 24552,
+    "last_commit_hash": "7e89d6c79c4919acf4643e56494ea02a11c68bd4",
     "category": "software",
     "purpose": "LangChain is a framework for building agents and LLM-powered applications, enabling the chaining of interoperable components and third-party integrations. It simplifies AI application development and helps future-proof decisions as underlying technologies evolve.",
     "installation": "uv add langchain",
     "install_surface": "cli",
     "desktop_compatibility": [],
-    "last_synced": "2026-09-21T17:35:00Z"
+    "last_synced": "2026-09-21T21:30:49Z"
   },
   {
     "repo_url": "https://github.com/chroma-core/chroma",
@@ -108,15 +108,15 @@
     "repo_url": "https://github.com/BerriAI/litellm",
     "name": "litellm",
     "description": "The fastest, litest AI Gateway. Rust core with Python SDK. Call 100+ LLM APIs in OpenAI (or native) format with cost tracking, guardrails, load balancing, and logging [Bedrock, Azure, OpenAI, Anthropic, OpenAI, VertexAI, vLLM, Nvidia NIM]",
-    "stars": 59328,
-    "forks": 11643,
-    "last_commit_hash": "557326501344e05b78196f1a3e9d5d3a67f57cd5",
+    "stars": 59341,
+    "forks": 11647,
+    "last_commit_hash": "79d6e236f9e91ca195c35ba35aa168218c50bcfe",
     "category": "gateway",
     "purpose": "LiteLLM is an open-source AI Gateway that provides a unified interface to call over 100 LLM providers using the OpenAI format. It can be used as a Python SDK for direct integration or deployed as a centralized proxy server for teams.",
     "installation": "uv tool install 'litellm[proxy]'\nlitellm --model gpt-4o",
     "install_surface": "cli",
     "desktop_compatibility": [],
-    "last_synced": "2026-09-21T17:35:02Z"
+    "last_synced": "2026-09-21T21:30:51Z"
   },
   {
     "repo_url": "https://github.com/ToolJet/ToolJet",
@@ -140,15 +140,15 @@
     "repo_url": "https://github.com/NousResearch/hermes-agent",
     "name": "hermes-agent",
     "description": "The agent that grows with you",
-    "stars": 247713,
-    "forks": 52146,
-    "last_commit_hash": "dbaec6a2042d28dcabc950dc458076d41173980c",
+    "stars": 247750,
+    "forks": 52174,
+    "last_commit_hash": "7b3c7aef31da73aabab0aa7fd15fdfe7c838834e",
     "category": "hermes_agent",
     "purpose": "Hermes Agent is a self-improving AI agent that learns from experience, creates and refines skills, and builds a deepening model of the user across sessions. It supports various LLM providers and can run on diverse infrastructure, including cloud VMs and local machines.",
     "installation": "Linux, macOS, WSL2, Termux:\n```bash\ncurl -fsSL https://hermes-agent.nousresearch.com/install.sh | bash\n```\nWindows (native, PowerShell):\n```powershell\niex (irm https://hermes-agent.nousresearch.com/install.ps1)\n```\nAfter installation:\n```bash\nsource ~/.bashrc    # reload shell (or: source ~/.zshrc)\nhermes              # start chatting!\n```",
     "install_surface": "cli",
     "desktop_compatibility": [],
-    "last_synced": "2026-09-21T17:35:05Z"
+    "last_synced": "2026-09-21T21:30:53Z"
   },
   {
     "repo_url": "https://github.com/ollama/ollama",
