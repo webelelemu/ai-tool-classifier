@@ -19,9 +19,9 @@
     "repo_url": "https://github.com/wonderwhy-er/DesktopCommanderMCP",
     "name": "DesktopCommanderMCP",
     "description": "This is MCP server for Claude that gives it terminal control, file system search and diff file editing capabilities",
-    "stars": 9679,
-    "forks": 1212,
-    "last_commit_hash": "c4c3d6b0c6e6d3f69291ec6aa7c439e680708a70",
+    "stars": 9687,
+    "forks": 1213,
+    "last_commit_hash": "d217d490afb11e655c02b52146d443b1bcf1dcb1",
     "category": "mcp",
     "purpose": "Desktop Commander MCP provides AI with terminal control, file system search, and diff file editing capabilities. It allows users to manage files, run processes, and automate tasks on their local machine through Model Context Protocol.",
     "installation": "Add this entry to your claude_desktop_config.json:\n\n- On Mac: `~/Library/Application Support/Claude/claude_desktop_config.json`\n- On Windows: `%APPDATA%\\Claude\\claude_desktop_config.json`\n- On Linux: `~/.config/Claude/claude_desktop_config.json`\n\n```json\n{\n  \"mcpServers\": {\n    \"desktop-commander\": {\n      \"command\": \"npx\",\n      \"args\": [\n        \"-y\",\n        \"@wonderwhy-er/desktop-commander@latest\"\n      ]\n    }\n  }\n}\n```\nRestart Claude if running.",
@@ -29,7 +29,7 @@
     "desktop_compatibility": [
       "claude-desktop"
     ],
-    "last_synced": "2026-09-21T11:38:02Z"
+    "last_synced": "2026-09-21T17:34:55Z"
   },
   {
     "repo_url": "https://github.com/flowiseai/flowise",
@@ -49,15 +49,15 @@
     "repo_url": "https://github.com/langchain-ai/langchain",
     "name": "langchain",
     "description": "The agent engineering platform.",
-    "stars": 146746,
-    "forks": 24541,
-    "last_commit_hash": "4af7ab8fcb98c2dc211d9e34cddedffa23eba4d9",
+    "stars": 146800,
+    "forks": 24549,
+    "last_commit_hash": "9762d685c7adcab7684fd3c8ca45c82fbc717a6f",
     "category": "software",
     "purpose": "LangChain is a framework for building agents and LLM-powered applications, enabling the chaining of interoperable components and third-party integrations. It simplifies AI application development and helps future-proof decisions as underlying technologies evolve.",
     "installation": "uv add langchain",
     "install_surface": "cli",
     "desktop_compatibility": [],
-    "last_synced": "2026-09-20T20:05:18Z"
+    "last_synced": "2026-09-21T17:35:00Z"
   },
   {
     "repo_url": "https://github.com/chroma-core/chroma",
@@ -108,23 +108,23 @@
     "repo_url": "https://github.com/BerriAI/litellm",
     "name": "litellm",
     "description": "The fastest, litest AI Gateway. Rust core with Python SDK. Call 100+ LLM APIs in OpenAI (or native) format with cost tracking, guardrails, load balancing, and logging [Bedrock, Azure, OpenAI, Anthropic, OpenAI, VertexAI, vLLM, Nvidia NIM]",
-    "stars": 59308,
-    "forks": 11632,
-    "last_commit_hash": "1cac8bd9ab0bec8d5b6beb57669ad86ab4319c80",
+    "stars": 59328,
+    "forks": 11643,
+    "last_commit_hash": "557326501344e05b78196f1a3e9d5d3a67f57cd5",
     "category": "gateway",
     "purpose": "LiteLLM is an open-source AI Gateway that provides a unified interface to call over 100 LLM providers using the OpenAI format. It can be used as a Python SDK for direct integration or deployed as a centralized proxy server for teams.",
     "installation": "uv tool install 'litellm[proxy]'\nlitellm --model gpt-4o",
     "install_surface": "cli",
     "desktop_compatibility": [],
-    "last_synced": "2026-09-21T11:38:07Z"
+    "last_synced": "2026-09-21T17:35:02Z"
   },
   {
     "repo_url": "https://github.com/ToolJet/ToolJet",
     "name": "ToolJet",
     "description": "Open-source foundation of ToolJet AI - the enterprise app generation platform for internal tools, dashboards, business applications, workflows and AI agents. Build visually, from a prompt, or from Claude Code, Codex and Cursor over MCP \ud83d\ude80",
-    "stars": 40950,
+    "stars": 40952,
     "forks": 5448,
-    "last_commit_hash": "1b79b38859c19c540d6e57663186110303bb7f3b",
+    "last_commit_hash": "7ecc5d68fa64f4bb5a254947bc0af2d907a19e61",
     "category": "mcp",
     "purpose": "ToolJet is an open-source platform for building internal tools, dashboards, and operational apps. It allows users to build visually, from a prompt, or through coding agents like Claude Code, Codex, and Cursor via its Model Context Protocol (MCP) server.",
     "installation": "ToolJet MCP is currently in beta. See the ToolJet MCP guide (https://docs.tooljet.com/docs/build-with-ai/mcp/overview) to set it up.\n\nQuickstart with Docker:\ndocker run \\\n  --name tooljet \\\n  --restart unless-stopped \\\n  -p 80:80 \\\n  --platform linux/amd64 \\\n  -v tooljet_data:/var/lib/postgresql/13/main \\\n  tooljet/try:ee-lts-latest",
@@ -134,21 +134,21 @@
       "opencode-desktop",
       "cursor"
     ],
-    "last_synced": "2026-09-21T11:38:05Z"
+    "last_synced": "2026-09-21T17:34:58Z"
   },
   {
     "repo_url": "https://github.com/NousResearch/hermes-agent",
     "name": "hermes-agent",
     "description": "The agent that grows with you",
-    "stars": 247636,
-    "forks": 52103,
-    "last_commit_hash": "db1f3f4564eb0f1a4b75744064057f07d9a5c6e5",
+    "stars": 247713,
+    "forks": 52146,
+    "last_commit_hash": "dbaec6a2042d28dcabc950dc458076d41173980c",
     "category": "hermes_agent",
     "purpose": "Hermes Agent is a self-improving AI agent that learns from experience, creates and refines skills, and builds a deepening model of the user across sessions. It supports various LLM providers and can run on diverse infrastructure, including cloud VMs and local machines.",
     "installation": "Linux, macOS, WSL2, Termux:\n```bash\ncurl -fsSL https://hermes-agent.nousresearch.com/install.sh | bash\n```\nWindows (native, PowerShell):\n```powershell\niex (irm https://hermes-agent.nousresearch.com/install.ps1)\n```\nAfter installation:\n```bash\nsource ~/.bashrc    # reload shell (or: source ~/.zshrc)\nhermes              # start chatting!\n```",
     "install_surface": "cli",
     "desktop_compatibility": [],
-    "last_synced": "2026-09-21T11:38:09Z"
+    "last_synced": "2026-09-21T17:35:05Z"
   },
   {
     "repo_url": "https://github.com/ollama/ollama",
